@@ -4,6 +4,7 @@ import { FollowsAPI } from './follows'
 import { PostsAPI } from './posts'
 import { CommentsAPI } from './comments'
 import { RationingAPI } from './rationing'
+import { VideosAPI } from './videos'
 
 export class API {
   constructor(db, minioClient) {
@@ -13,5 +14,6 @@ export class API {
     this.posts = new PostsAPI(db)
     this.comments = new CommentsAPI(db)
     this.rationing = new RationingAPI(db)
+    this.videos = new VideosAPI(minioClient)
   }
 }

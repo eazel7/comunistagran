@@ -4,6 +4,7 @@
   import { writable } from "svelte/store";
   import checkAuthorization from "../check-authorization";
   import { goto } from "@sapper/app";
+  import PlusIcon from "../../components/PlusIcon.svelte"
 
   let caption = "";
   let postPicture;
@@ -74,7 +75,7 @@
               hooveringClass="hooveringClass"
               id="postPictureDropZone"
               dropzoneEvents={{ success: postPictureUploaded }}
-              options={{ url: '/api/upload-post-picture', clickable: true, acceptedFiles: 'image/jpeg, image/jpg, image/png', maxFilesize: 256 }}>
+              options={{ url: '/api/upload-post-picture', clickable: true, acceptedFiles: 'video/mp4, image/jpeg, image/jpg, image/png', maxFilesize: 256 }}>
               <p
                 on:click={triggerSelection}
                 style="cursor: pointer; text-align: center">
